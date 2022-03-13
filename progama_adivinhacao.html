@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+     function pulaLinha () {
+  
+     document.write("<br><br>")
+
+  }
+
+     function escreva (frase) {
+     document.write(frase);
+     pulaLinha();
+
+  } 
+    
+    function sorte (n) {
+
+        return Math.round(Math.random() * n);
+   
+
+ }
+      
+
+     var numeroPensado = sorte(10);
+     var tentativas = 1;
+     
+     while (tentativas <= 3) {
+     
+     var chute = parseInt(prompt ("Bora ver se você ta com sorte hoje, coloca ai o seu numero"));
+     
+     if (chute > 10) {
+         escreva("Esse não é um numero de 0 a 100!!!");
+
+     }
+
+     if (chute == numeroPensado) {
+
+     escreva ("Você acertou!!!");
+     break;
+
+     } else {
+
+        escreva("Você mamou, errou o numero " + numeroPensado);
+        
+     }
+
+      tentativas++
+   }
+
+</script>
